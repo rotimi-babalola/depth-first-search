@@ -15,10 +15,10 @@ class Graph {
   }
 
   /**
-   * Searches a graph using Depth First Search
-   * @param {string} queryValue
+   * Prints the values in a graph
+   * @param {*} queryValue
    */
-  dfsTraverse(queryValue) {
+  dfsTraverse() {
     while (this.DFSStack.stack.length > 0) {
       this.currentNode = this.DFSStack.pop();
       if (!this.currentNode.visited) {
@@ -39,6 +39,10 @@ class Graph {
     }
   }
 
+  /**
+   * Searches a graph using Depth First Search
+   * @param {string} queryValue
+   */
   dfs(queryValue) {
     // console.log(this.DFSStack.stack, 'stack >>>>');
     while (this.DFSStack.stack.length > 0) {
@@ -47,7 +51,7 @@ class Graph {
         // push left and right node to the stack
         // mark it as visited
         this.currentNode.visited = true;
-        console.log(this.currentNode.value, '>>>>');
+        console.log(this.currentNode.value);
 
         // check if the value of query is a match
         // for the current node's value

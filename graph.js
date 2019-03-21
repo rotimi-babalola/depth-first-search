@@ -44,7 +44,6 @@ class Graph {
    * @param {string} queryValue
    */
   dfs(queryValue) {
-    // console.log(this.DFSStack.stack, 'stack >>>>');
     while (this.DFSStack.stack.length > 0) {
       this.currentNode = this.DFSStack.pop();
       if (!this.currentNode.visited) {
